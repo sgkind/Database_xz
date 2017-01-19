@@ -7,8 +7,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include "ui_logindialog.h"
-
-
+#include "user.h"
 
 namespace Ui {
 class LoginDialog;
@@ -29,6 +28,7 @@ private slots:
 
 private:
     Ui::LoginDialog *ui;
+    User* user;
 
 
 };

@@ -16,12 +16,14 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     login.cpp \
-    mainwidget.cpp
+    mainwidget.cpp \
+    user.cpp
 
 HEADERS  += mainwindow.h \
     connect.h \
     login.h \
-    mainwidget.h
+    mainwidget.h \
+    user.h
 
 FORMS += \
     logindialog.ui

@@ -8,6 +8,9 @@
 #include <QHBoxLayout>
 #include <QTableView>
 #include <QSqlTableModel>
+#include <QMenu>
+
+#include "user.h"
 
 class MainWidget : public QWidget
 {
@@ -21,10 +24,13 @@ private:
 
     QTableView *contactTableView;
     QTableView *customerTableView;
+    QTableView *weekplanTableView;
 
     QTreeWidgetItem *item1;
     QTreeWidgetItem *item2;
     QTreeWidgetItem *item3;
+    QTreeWidgetItem *item31;
+    QTreeWidgetItem *item32;
 
     QHBoxLayout *mainLayout;
 
@@ -34,12 +40,23 @@ private:
     void customers();
     QSqlTableModel *customersModel;
 
+    void weekplans();
+    QSqlTableModel *weekplansModel;
+
+    QMenu *menu;
+
+    User *user;
+
 signals:
 
 public slots:
     void addContact(QModelIndex);
+    void slotAdd();
+    void slotDelete();
 
-    void changeStack(QTreeWidgetItem* itemb, QTreeWidgetItem* itema);
+    void customContextMenu(QPoint);
+
+    void changeStack(QTreeWidgetItem* item, int);
 };
 
 #endif // MAINWIDGET_H

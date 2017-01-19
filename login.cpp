@@ -28,18 +28,9 @@ void Login::on_loginBtn_clicked()
     } else {
          QString username = ui->userNameLineEdit->text().trimmed();
          QString password = ui->passwordLineEdit->text().trimmed();
-         QSqlQuery query;
-         bool success = query.exec(QString("select * from users where name = '%1'").arg(username));
-         if (success && query.next()) {
-             QString user_password = query.value(2).toString();
-             int authority = query.value(3).toInt();
-
-             if (password == user_password)
-                 QDialog::accept();
-             else {
-                 QMessageBox::warning(this, tr("密码错误"), tr("请先输入正确的密码再登录"), QMessageBox::Ok);
-                 ui->passwordLineEdit->clear();
-             }
+         user = User::getInstance();
+         if (user->login(username, password)){
+             QDialog::accept();
          } else {
              QMessageBox::warning(this, tr("密码错误"), tr("请先输入正确的密码再登录"), QMessageBox::Ok);
              ui->passwordLineEdit->clear();
