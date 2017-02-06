@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>509</width>
+    <height>328</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,9 +16,9 @@
   <widget class="QPushButton" name="quitBtn">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>200</y>
-     <width>80</width>
+     <x>300</x>
+     <y>270</y>
+     <width>91</width>
      <height>26</height>
     </rect>
    </property>
@@ -34,9 +34,9 @@
   <widget class="QPushButton" name="loginBtn">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>200</y>
-     <width>80</width>
+     <x>181</x>
+     <y>270</y>
+     <width>91</width>
      <height>26</height>
     </rect>
    </property>
@@ -52,38 +52,141 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>80</y>
-     <width>171</width>
-     <height>20</height>
+     <x>50</x>
+     <y>20</y>
+     <width>391</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
-    <string>欢迎登录XXX数据库</string>
+    <string>南京协众空调集团研发部电器组管理数据库</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QLabel" name="img_Label">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>120</y>
-     <width>221</width>
-     <height>62</height>
+     <x>0</x>
+     <y>0</y>
+     <width>511</width>
+     <height>71</height>
     </rect>
    </property>
-   <layout class="QFormLayout" name="formLayout">
-    <property name="verticalSpacing">
-     <number>8</number>
-    </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="database.qrc">:/login.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="rememberPwdCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>210</y>
+     <width>151</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>记住用户名和密码</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="AutoLoginCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>233</y>
+     <width>81</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>自动登录</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>399</x>
+     <y>103</y>
+     <width>25</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <activeoff>:/gear.jpg</activeoff>
+     <activeon>:/gear.jpg</activeon>
+    </iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>112</x>
+     <y>102</y>
+     <width>281</width>
+     <height>92</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>服务器：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBox"/>
+    </item>
+    <item row="1" column="0">
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
@@ -95,10 +198,10 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="1">
+    <item row="1" column="1">
      <widget class="QLineEdit" name="userNameLineEdit"/>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QLabel" name="label_2">
       <property name="font">
        <font>
@@ -110,7 +213,7 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
+    <item row="2" column="1">
      <widget class="QLineEdit" name="passwordLineEdit">
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
@@ -119,7 +222,17 @@
     </item>
    </layout>
   </widget>
+  <zorder>img_Label</zorder>
+  <zorder>quitBtn</zorder>
+  <zorder>loginBtn</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>label_3</zorder>
+  <zorder>rememberPwdCheckBox</zorder>
+  <zorder>AutoLoginCheckBox</zorder>
+  <zorder>pushButton</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="database.qrc"/>
+ </resources>
  <connections/>
 </ui>

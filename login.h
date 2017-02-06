@@ -1,13 +1,16 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
+#include "ui_logindialog.h"
+#include "user.h"
+
 #include <QDialog>
 #include <QMessageBox>
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
-#include "ui_logindialog.h"
-#include "user.h"
+#include <QSettings>
+#include <QTimer>
 
 namespace Ui {
 class LoginDialog;
@@ -26,11 +29,20 @@ private slots:
 
     void on_quitBtn_clicked();
 
+    void on_userNameLineEdit_textEdited(const QString &arg1);
+
+    void on_passwordLineEdit_textEdited(const QString &arg1);
+
 private:
     Ui::LoginDialog *ui;
     User* user;
+    QSettings *config;
+    QTimer *autoTimer;
 
-
+    QString username;
+    QString password;
+    bool rememberPwd;
+    bool autoLogin;
 };
 
 #endif //    QDialog::reject(); LOGIN_H

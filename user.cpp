@@ -23,9 +23,7 @@ bool User::login(QString uname, QString upassword) {
     if (success && query.next()) {
         name = uname;
         password = query.value(2).toString();
-        qDebug() << password << "password";
         authority = query.value(3).toInt();
-        qDebug() << authority << "authority";
     } else
         return false;
 

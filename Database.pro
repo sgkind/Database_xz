@@ -17,13 +17,35 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     login.cpp \
     mainwidget.cpp \
-    user.cpp
+    user.cpp \
+    mydelegate.cpp \
+    mymodel.cpp \
+    changepwd.cpp \
+    customwidget.cpp \
+    schedulequerywidget.cpp \
+    schedulequerytableview.cpp \
+    newtasktableview.cpp \
+    scheduletableview.cpp \
+    informationtableview.cpp
 
 HEADERS  += mainwindow.h \
     connect.h \
     login.h \
     mainwidget.h \
-    user.h
+    user.h \
+    mydelegate.h \
+    mymodel.h \
+    changepwd.h \
+    customwidget.h \
+    schedulequerywidget.h \
+    schedulequerytableview.h \
+    newtasktableview.h \
+    scheduletableview.h \
+    informationtableview.h
 
 FORMS += \
-    logindialog.ui
+    logindialog.ui \
+    schedulequerywidget.ui
+
+RESOURCES += \
+    database.qrc

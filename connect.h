@@ -8,7 +8,9 @@ static bool createConnection()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("127.0.0.1");
+
     db.setDatabaseName("fuck");
+    //db.setUserName("sgkind");
     db.setUserName("root");
     db.setPassword("526157sgk");
     bool success = db.open();
